@@ -1,0 +1,42 @@
+{% extends 'admins/adminbase.html' %}
+{% load static %}
+{% block contents %}
+
+<style>
+    .admin-home-container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .admin-home-container h2 {
+        font-size: 2.2rem;
+        color: #295b8d;
+        margin-bottom: 20px;
+    }
+
+    .admin-home-container p {
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.8;
+        max-width: 800px;
+        margin: 0 auto 15px;
+    }
+</style>
+
+<div class="admin-home-container">
+    <h2>Welcome to GestureMouse Admin Panel</h2>
+    <p>
+        As an administrator of GestureMouse, you play a vital role in overseeing gesture-based interactions,
+        ensuring the smooth functionality of the virtual mouse system, and monitoring real-time gesture inputs.
+    </p>
+    <p>
+        From reviewing user activity to managing system logs and calibrating gesture recognition accuracy,
+        use the tools in the navigation bar to maintain and enhance the performance of this innovative control system.
+    </p>
+</div>
+
+
+{% endblock %}

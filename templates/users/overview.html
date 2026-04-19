@@ -1,0 +1,134 @@
+{% extends 'users/userbase.html' %}
+{% block contents %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Virtual Mouse Project Overview</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            {% comment %} background: linear-gradient(to right, #e0eafc, #cfdef3); {% endcomment %}
+            margin: 0;
+            padding: 0;
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 40px 20px;
+            margin-left : 250px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3c72;
+        }
+        .section {
+            background-color: rgba(255, 255, 255, 0.99);
+            margin-top: 30px;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #34495e;
+            margin-bottom: 15px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .highlight {
+            background: #eaf6ff;
+            padding: 8px 12px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Virtual Mouse Using Hand Gestures</h1>
+
+        <div class="section">
+            <h2>📌 Project Summary</h2>
+            <p>
+                This project is a contactless virtual mouse system that allows users to control their computer cursor using hand gestures. 
+                Leveraging real-time hand tracking with a webcam and computer vision, the system interprets specific finger positions 
+                to perform mouse functions like movement, clicks, and scrolling. It aims to offer an intuitive and hygienic way of interacting with computers.
+            </p>
+        </div>
+        <div class="section">
+            <h2>✋ Recognized Hand Gestures</h2>
+            <div class="highlight">📌 Index Finger Up – Move Cursor</div>
+            <div class="highlight">📌 Index + Thumb Touch – Left Click</div>
+            <div class="highlight">📌 Middle + Thumb Touch – Right Click</div>
+            <div class="highlight">📌 Index + Thumb Double Touch – Double Click</div>
+            <div class="highlight">📌 Index + Thumb hold 1 sec – drag and drop</div>
+            <div class="highlight">📌 Fast swipe left/right – Switch Tabs</div>
+            <div class="highlight">📌 Thumb–Index distance – Volume Control</div>
+            <div class="highlight">📌 All 5 fingers open ✋ – Screenshot</div>
+            <div class="highlight">📌 fingers should move up and down ✋ – Scrolling</div>
+        </div>
+        <div class="section">
+            <h2>🔧 Technologies Used</h2>
+            <ul>
+                <li><strong>Python 3.11.2</strong></li>
+                <li><strong>OpenCV</strong> – For image capture and processing</li>
+                <li><strong>MediaPipe</strong> – For real-time hand tracking</li>
+                <li><strong>PyAutoGUI</strong> – For GUI automation like mouse events</li>
+                <li><strong>Django</strong> – For web integration</li>
+                <li><strong>HTML/CSS</strong> – For frontend design</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>📚 Libraries Used</h2>
+            <ul>
+                <li><code>cv2</code> (OpenCV)</li>
+                <li><code>mediapipe</code></li>
+                <li><code>pyautogui</code></li>
+                <li><code>numpy</code></li>
+                <li><code>time</code></li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>🧠 Algorithms & Concepts</h2>
+            <ul>
+                <li>Hand Landmark Detection using MediaPipe</li>
+                <li>Euclidean Distance Calculation between fingers</li>
+                <li>Gesture Recognition based on finger positions</li>
+                <li>Coordinate mapping from camera frame to screen resolution</li>
+                <li>Thresholding to reduce false positives</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>✨ Features Implemented</h2>
+            <ul>
+                <li>Move mouse cursor using index finger</li>
+                <li>Single click with index and thumb touching</li>
+                <li>Right click with middle finger and thumb touching</li>
+                <li>Double click with index, middle, and thumb close together</li>
+                <li>Scrolling by moving two fingers vertically</li>
+                <li>Fail-safe feature to stop operation when hand leaves frame</li>
+            </ul>
+        </div>
+
+
+    </div>
+</body>
+</html>
+
+
+
+{% endblock %}
